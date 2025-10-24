@@ -1,46 +1,29 @@
-class Person {
-  constructor(name, age) {
-    this.name = name;
-    this.age = age;
-  }
-
-  greet() {
-    console.log(`Hello, my name is ${this.name}, I am ${this.age} years old.`);
-  }
+body {
+  font-family: Arial, sans-serif;
+  background-color: #f7f7f7;
+  color: #333;
+  text-align: center;
+  margin-top: 80px;
 }
 
-class Employee extends Person {
-  constructor(name, age, jobTitle) {
-    super(name, age);
-    this.jobTitle = jobTitle;
-  }
-
-  jobGreet() {
-    console.log(`Hello, my name is ${this.name}, I am ${this.age} years old, and my job title is ${this.jobTitle}.`);
-  }
+h1 {
+  color: #0066cc;
 }
 
-// Expose classes for Cypress test access
-window.Person = Person;
-window.Employee = Employee;
-
-// Demo UI functionality (optional)
-function displayOutput(msg) {
-  const output = document.getElementById('output');
-  if (output) output.textContent = msg;
+.container {
+  margin-top: 40px;
 }
 
-const demoBtn = document.getElementById('demoBtn');
-if (demoBtn) {
-  demoBtn.addEventListener('click', () => {
-    const person = new Person("Alice", 25);
-    person.greet(); // Output to console for Cypress test
-    displayOutput(`Hello, my name is Alice, I am 25 years old.`);
+button {
+  background-color: #0066cc;
+  color: white;
+  border: none;
+  padding: 12px 24px;
+  margin: 10px;
+  border-radius: 5px;
+  cursor: pointer;
+}
 
-    setTimeout(() => {
-      const employee = new Employee("Bob", 30, "Manager");
-      employee.jobGreet(); // Output to console for Cypress test
-      displayOutput(`Hello, my name is Bob, I am 30 years old, and my job title is Manager.`);
-    }, 1200);
-  });
+button:hover {
+  background-color: #004c99;
 }

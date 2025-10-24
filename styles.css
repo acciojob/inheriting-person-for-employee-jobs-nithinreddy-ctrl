@@ -1,34 +1,30 @@
 /*  your css code here. If applicable */
 body {
-    font-family: Arial, sans-serif;
-    background: #f6f9fa;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    padding-top: 50px;
+  font-family: Arial, sans-serif;
+  background-color: #f7f7f7;
+  color: #333;
+  text-align: center;
+  margin-top: 80px;
 }
+
+h1 {
+  color: #0066cc;
+}
+
 .container {
-    background: white;
-    padding: 22px;
-    border-radius: 12px;
-    box-shadow: 0 4px 16px rgba(0,0,0,0.08);
-    text-align: center;
+  margin-top: 40px;
 }
+
 button {
-    margin-bottom: 20px;
-    padding: 10px 22px;
-    background: #e76f51;
-    color: white;
-    border: none;
-    border-radius: 7px;
-    cursor: pointer;
-    font-size: 16px;
+  background-color: #0066cc;
+  color: white;
+  border: none;
+  padding: 12px 24px;
+  margin: 10px;
+  border-radius: 5px;
+  cursor: pointer;
 }
+
 button:hover {
-    background: #bc4a28;
-}
-#output {
-    color: #333;
-    font-size: 18px;
-    white-space: pre-line;
+  background-color: #004c99;
 }
