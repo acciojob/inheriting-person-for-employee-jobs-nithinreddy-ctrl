@@ -1,29 +1,31 @@
-body {
-  font-family: Arial, sans-serif;
-  background-color: #f7f7f7;
-  color: #333;
-  text-align: center;
-  margin-top: 80px;
+// Person class
+class Person {
+  constructor(name, age) {
+    this.name = name;
+    this.age = age;
+  }
+
+  greet() {
+    // EXACT output for Cypress validation
+    console.log(`Hello, my name is ${this.name}, I am ${this.age} years old.`);
+  }
 }
 
-h1 {
-  color: #0066cc;
+// Employee class extending Person
+class Employee extends Person {
+  constructor(name, age, jobTitle) {
+    // Call parent constructor
+    super(name, age);
+    this.jobTitle = jobTitle;
+  }
+
+  jobGreet() {
+    // EXACT output for Cypress validation
+    console.log(`Hello, my name is ${this.name}, I am ${this.age} years old, and my job title is ${this.jobTitle}.`);
+  }
 }
 
-.container {
-  margin-top: 40px;
-}
-
-button {
-  background-color: #0066cc;
-  color: white;
-  border: none;
-  padding: 12px 24px;
-  margin: 10px;
-  border-radius: 5px;
-  cursor: pointer;
-}
-
-button:hover {
-  background-color: #004c99;
+// Export for Cypress test environment
+if (typeof module !== "undefined" && module.exports) {
+  module.exports = { Person, Employee };
 }
